@@ -1,0 +1,36 @@
+{# Je créé ma structure commune de page (le squelette de page qui
+ sera appliqué sur toutes les pages
+#}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
+</head>
+<body>
+
+<header>
+    <nav class="nav">
+        <ul>
+            <li class="item-nav">
+                <a href="{{ path('accueil') }}">Home</a>
+            </li>
+            <li class="item-nav">
+                <a href="{{ path('articles') }}">Articles</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+{# Je définis dans mon squelette un block, qui me permet de
+    placer le contenu spécifique de chaque page
+#}
+{% block content %}
+{% endblock content %}
+
+</body>
+</html>
